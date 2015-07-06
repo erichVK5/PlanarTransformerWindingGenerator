@@ -352,9 +352,9 @@ public class PlanarTransformerWindingGenerator
 
 					// we only have capacitance between turns, so we stop
 					// summing capacitance length when generating the
-					// final turn, i.e. stop at (turnsTotal - 1)
+					// final turn, i.e. stop at (turnsPerLayer - 1)
 
-	                                if (spiralCounter < (turnsTotal - 1))
+	                                if (spiralCounter < (turnsPerLayer - 1))
 	                                {
 	                                        cumulativeCapacitorLengthMM +=
 	                                                calculateSegmentLength(x1, y1, x2, y2)
@@ -529,7 +529,7 @@ public class PlanarTransformerWindingGenerator
 
 
 					// there is only capacitance between turns, so we stop summing
-					// capacitor length at (turnsTotal -1)
+					// capacitor length at (turnsPerLayer -1)
 
 	                                if (spiralCounter < (turnsPerLayer - 1))
         	                        {
